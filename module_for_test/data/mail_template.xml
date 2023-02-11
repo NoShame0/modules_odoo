@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<odoo>
+    <data>
+        <record id="email_template_rent_requests" model="mail.template">
+            <field name="name">Email to students</field>
+            <field name="model_id" ref="model_rent_requests"/>
+            <field name="email_from">{{ user.email }}</field>
+            <field name="email_to">{{ object.email_tl }}</field>
+            <field name="subject">Rent Request: {{ object.name }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p>Dear, <t t-out="object.person_name_tl"/></p>
+                    <p>A new Rent Request has been created:</p>
+                    <p>Customer Name: <t t-out="object.name"/></p>
+                    <p>Customer Email: <t t-out="user.email"/></p>
+                    <p>Customer Phone: <t t-out="object.phone"/></p>
+                    <p>Description: <t t-out="object.description"/></p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<odoo>
+
+    <record id="action_create_request" model="ir.actions.server">
+        <field name="name">Create Request</field>
+        <field name="model_id" ref="model_rent_requests"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.create_request({
+                'name': env.context['custom_name'],
+                'description': env.context['custom_description'],
+                'email_tl': env.context['custom_email_tl'],
+                'person_name_tl': env.context['custom_name_tl'],
+                'phone': env.context['custom_phone']
+            })
+        </field>
+    </record>
+
+</odoo>
