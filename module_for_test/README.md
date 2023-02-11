@@ -27,9 +27,7 @@ Also, this module has basic html template for create message based on rent model
 
 To install the module, follow these steps:
 
-1. Clone the repository from GitHub to directory with custom modules odoo using the following command: 
-
-`git clone https://github.com/NoShame0/modules_odoo/tree/master/module_for_test`
+1. Clone the repository from GitHub to directory
 
 2. Restart the Odoo service to apply the changes.
 
